@@ -8,12 +8,14 @@
   },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "dev": "nodemon server.js"
+    "dev": "nodemon server.js",
+    "seed": "node prisma/seed.js"
   },
   "author": "",
   "license": "ISC",
   "keywords": [],
   "dependencies": {
+    "@faker-js/faker": "^9.2.0",
     "@prisma/client": "^5.22.0",
     "bcrypt": "^5.1.1",
     "dotenv": "^16.4.5",
@@ -23,4 +25,5 @@
     "nodemon": "^3.1.7",
     "prisma": "^5.22.0"
   }
+ 
 }
