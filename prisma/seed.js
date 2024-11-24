@@ -7,7 +7,6 @@ async function main() {
   const products = [];
   const numProducts = 20;
 
-
   for (let i = 0; i < numProducts; i++) {
     products.push({
       name: faker.commerce.productName(),
@@ -15,7 +14,6 @@ async function main() {
       price: parseFloat(faker.commerce.price())
     });
   }
-
 
   for (const product of products) {
     await prisma.product.create({ data: product });

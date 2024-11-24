@@ -21,12 +21,14 @@ model User {
 }
 
 model Order {
-  id        Int      @id @default(autoincrement())
-  createdAt DateTime @default(now())
-  userId    Int 
-  user      User     @relation(fields: [userId], references: [id])
-  products  Product[]
+  id         Int       @id @default(autoincrement())
+  createdAt  DateTime  @default(now())
+  note       String?
+  userId     Int
+  user       User      @relation(fields: [userId], references: [id])
+  products   Product[]
 }
+
 
 model Product {
   id          Int   @id @default(autoincrement())
