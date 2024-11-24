@@ -1,9 +1,9 @@
 const express = require("express");
 const prisma = require("../prisma");
-const authenicate = require("../middleware/authenticate");
+const authenticate = require("../middleware/authenticate");
 const router = express.Router();
 
-router.use(authenicate);
+router.use(authenticate);
 
 router.get("/", async (req, res, next) => {
   try {
